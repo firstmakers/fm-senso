@@ -1,0 +1,180 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TestBotones.WindowsStates"
+	x:Name="UserControl" MinHeight="37" MinWidth="113.2" Height="37.25" Width="113.167">
+    <UserControl.Resources>
+        <Style x:Key="BarButtons" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="rectangle" Fill="#FFF4F4F5" RadiusY="2" RadiusX="2" Stroke="{x:Null}"/>
+                            <Canvas HorizontalAlignment="Left" Height="15" Margin="2.415,2.249,0,0" VerticalAlignment="Top" Width="15">
+                                <Rectangle x:Name="icon1" Fill="#FF5C85B8" HorizontalAlignment="Center" Height="2.782" RadiusY="0.438" RadiusX="0.438" Stroke="#FF5C85B8" VerticalAlignment="Center" Width="12.281" Canvas.Left="1.43" Canvas.Top="4.062"/>
+                                <Rectangle x:Name="icon2" Fill="#FF5C85B8" HorizontalAlignment="Center" Height="1" RadiusY="0.438" RadiusX="0.438" Stroke="#FF5C85B8" VerticalAlignment="Center" Width="12.281" Canvas.Left="1.43" Canvas.Top="12.312"/>
+                                <Rectangle x:Name="icon3" Fill="#FF5C85B8" HorizontalAlignment="Center" Height="1.5" RadiusY="0.2" RadiusX="0.2" VerticalAlignment="Center" Width="7.499" RenderTransformOrigin="0.5,0.5" Canvas.Left="9.209" Canvas.Top="8.468" Stroke="#FF5C85B8">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+                                <Rectangle x:Name="icon4" Fill="#FF5C85B8" HorizontalAlignment="Center" Height="1.5" RadiusY="0.2" RadiusX="0.2" VerticalAlignment="Center" Width="7.501" RenderTransformOrigin="0.5,0.5" StrokeThickness="0" Canvas.Top="8.53" Canvas.Left="-1.583">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+                            </Canvas>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle" Value="#FFDADADA"/>
+                                <Setter Property="RadiusX" TargetName="rectangle" Value="2"/>
+                                <Setter Property="RadiusY" TargetName="rectangle" Value="2"/>
+                                <Setter Property="Fill" TargetName="icon1" Value="#FF0072B6"/>
+                                <Setter Property="StrokeThickness" TargetName="icon1" Value="0"/>
+                                <Setter Property="Fill" TargetName="icon3" Value="#FF0072B6"/>
+                                <Setter Property="StrokeThickness" TargetName="icon3" Value="0"/>
+                                <Setter Property="StrokeThickness" TargetName="icon2" Value="0"/>
+                                <Setter Property="Fill" TargetName="icon2" Value="#FF0072B6"/>
+                                <Setter Property="Fill" TargetName="icon4" Value="#FF0072B6"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle" Value="#FF5C85B8"/>
+                                <Setter Property="Fill" TargetName="icon1" Value="#FFF4F4F5"/>
+                                <Setter Property="Fill" TargetName="icon2" Value="#FFF4F4F5"/>
+                                <Setter Property="Fill" TargetName="icon3" Value="#FFF4F4F5"/>
+                                <Setter Property="Fill" TargetName="icon4" Value="#FFF4F4F5"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonClose" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="rectangle" Fill="#FFF4F4F5" RadiusY="2" RadiusX="2" Stroke="{x:Null}"/>
+                            <Canvas HorizontalAlignment="Left" Height="15" Margin="2.415,2.249,0,0" VerticalAlignment="Top" Width="15">
+                                <Path x:Name="icon3" Fill="#FF5C85B8" HorizontalAlignment="Center" VerticalAlignment="Center" Width="10" Canvas.Left="2.542" StrokeThickness="0" Data="M4.4844437,0 L5.4844437,0 C5.7605863,0 5.9844437,0.22385764 5.9844437,0.5 L5.9844437,3.9561594 9.5,3.9561594 C9.7761421,3.9561594 10,4.180017 10,4.4561594 L10,5.4561594 C10,5.7323017 9.7761421,5.9561594 9.5,5.9561594 L5.9844437,5.9561594 5.9844437,9.4999998 C5.9844437,9.7761424 5.7605863,9.9999998 5.4844437,9.9999998 L4.4844437,9.9999998 C4.2083011,9.9999998 3.9844437,9.7761424 3.9844437,9.4999998 L3.9844437,5.9561594 0.49999997,5.9561594 C0.22385763,5.9561594 0,5.7323017 0,5.4561594 L0,4.4561594 C0,4.180017 0.22385763,3.9561594 0.49999997,3.9561594 L3.9844437,3.9561594 3.9844437,0.5 C3.9844437,0.22385764 4.2083011,0 4.4844437,0 z" Height="10" RenderTransformOrigin="0.5,0.495615947142028" Stretch="Fill" Canvas.Top="2.596">
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="45"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </Canvas>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle" Value="#FFDADADA"/>
+                                <Setter Property="Fill" TargetName="icon3" Value="#FF0072B6"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFCF0202" Offset="0"/>
+                                            <GradientStop Color="#FFD44A4A" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonMinimize" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="rectangle" Fill="#FFF4F4F5" RadiusY="2" RadiusX="2" Stroke="{x:Null}"/>
+                            <Canvas HorizontalAlignment="Left" Height="15" Margin="2.415,2.249,0,0" VerticalAlignment="Top" Width="15">
+                                <Rectangle x:Name="icon1" Fill="#FF5C85B8" HorizontalAlignment="Center" Height="3" RadiusY="0.438" RadiusX="0.438" Stroke="#FF5C85B8" VerticalAlignment="Center" Width="12" Canvas.Left="2" Canvas.Top="10"/>
+                            </Canvas>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle" Value="#FFDADADA"/>
+
+                                <Setter Property="Fill" TargetName="icon1" Value="#FF0072B6"/>
+
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Fill" TargetName="rectangle" Value="#FF5C85B8"/>
+
+                                <Setter Property="Fill" TargetName="icon1" Value="#FFF4F4F5"/>
+
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Button Content="Button" Height="20" Margin="0,8,47,0" Style="{DynamicResource BarButtons}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="20" Click="Maximizar">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Button" Height="20" Margin="0,8,12,0" Style="{DynamicResource ButtonClose}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="20" Click="Cerrar">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Button" Height="20" Margin="0,8,82,0" Style="{DynamicResource ButtonMinimize}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="20" Click="Minimizar">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,56 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TMB.AnimacionHumedad"
+	d:DesignWidth="400" d:DesignHeight="400">
+    <UserControl.Resources>
+        <Storyboard x:Key="Wave">
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.OpacityMask).(Brush.RelativeTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" 
+                             Storyboard.TargetName="water"
+                             RepeatBehavior="Forever" 
+                             From="0" 
+                             To="1" 
+                             Duration="0:0:1" />
+        </Storyboard>
+    </UserControl.Resources>
+    <Viewbox x:Name="LayoutRoot">
+        <Grid Width="300" Height="300">
+            <Grid x:Name="wave"  Height="377" Canvas.Left="361" Width="227" Background="#00000000" Canvas.Top="-98" Margin="385,-77,-312,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition x:Name="Amplitud"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Path Fill="#FF82C6FF" Data="M12.5,1.6925709 C31.25,1.6925709 31.25,18.615654 50,18.615654 68.75,18.615654 68.75,1.6925709 87.5,1.6925709 87.499909,27.077196 87.5,27.077107 87.5,27.077107 63.28125,27.077136 12.5,27.077196 12.5,27.077196 12.5,27.077196 12.500094,27.077196 12.5,1.6925709 z" Stretch="Fill" Grid.Row="1"/>
+                <Rectangle Fill="#FF82C6FF" Grid.Row="2" Margin="0,-1,0,0" />
+            </Grid>
+
+            <Canvas>
+
+                <Rectangle x:Name="water" Fill="#a055a9e9" Height="138.25" Canvas.Left="47.25" Canvas.Top="122.875" Width="203.5">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Visual="{Binding ElementName=wave}" TileMode="Tile" Viewport="0,-1,1,3" Stretch="None"  >
+                            <VisualBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform />
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform x:Name="Altura"  />
+                                </TransformGroup>
+                            </VisualBrush.RelativeTransform>
+                        </VisualBrush>
+                    </Rectangle.OpacityMask>
+
+                </Rectangle>
+                <Path Data="M283.1467,0 C285.19408,0 287.24146,0.78104782 288.80356,2.3431416 L290.21777,3.7573586 C293.34196,6.8815536 293.34196,11.946873 290.21777,15.07107 L263.09295,42.195885 263.09295,187.71796 C263.09296,192.13623 259.51123,195.71796 255.09295,195.71796 L253.09296,195.71796 252.40546,195.68325 251.71795,195.71796 39.467957,195.71796 37.467957,195.71796 C37.191818,195.71796 36.918945,195.70397 36.650009,195.67665 36.381073,195.64934 36.116074,195.60871 35.855682,195.55542 35.595291,195.50214 35.339508,195.43621 35.089005,195.3583 34.838501,195.28038 34.593277,195.19048 34.354004,195.08928 34.114716,194.98807 33.881393,194.87555 33.654678,194.7524 33.427979,194.62925 33.207886,194.49546 32.995087,194.35169 32.782288,194.20792 32.576767,194.05419 32.379211,193.89115 32.181656,193.72811 31.992065,193.55577&#xA;31.811111,193.37481 31.630142,193.19385 31.457809,193.00426 31.294769,192.80671 31.131729,192.60915 30.977997,192.40363 30.834229,192.19083 30.69046,191.97803 30.556671,191.75794 30.433517,191.53124 30.310364,191.30452 30.197845,191.0712 30.096634,190.83191 29.995438,190.59264 29.905533,190.34742 29.827621,190.09691 29.74971,189.84641 29.683777,189.59063 29.630493,189.33023 29.577209,189.06984 29.536575,188.80484 29.509262,188.53591 29.481949,188.26697&#xA;29.467957,187.9941 29.467957,187.71796 L29.467957,185.71796 29.467957,43.695879 2.3431396,16.571068 C-0.78105164,13.446873 -0.78105164,8.3815536 2.3431396,5.2573566 L3.7573547,3.8431454 C6.881546,0.71895218 11.946869,0.71895218 15.07106,3.8431454 L44.592773,33.364855 C45.95961,34.731688 46.728455,36.470067 46.899307,38.25489 L46.906891,38.413735 47.108292,38.964006 C47.342041,39.715518 47.467957,40.514535 47.467957,41.342962 L47.467957,177.71796 245.09296,177.71796 245.09296,41.342962 C245.09296,40.514534 245.21888,39.715517 245.45262,38.964006 L245.67242,38.363472 245.66161,38.288528 C245.44194,35.993756 246.21078,33.622213 247.96814,31.864852 L277.48985,2.3431416 C279.05195,0.78104782 281.09933,0 283.1467,0 z" 
+                      Fill="#FF55A9E9" Height="195.718" Canvas.Left="4.282" Stretch="Fill" Stroke="Black" StrokeThickness="0" Canvas.Top="83.407" Width="292.561"/>
+            </Canvas>
+            <Rectangle Fill="#FFDBDBDB" HorizontalAlignment="Left" Height="444" Margin="317,-106,-411,-38" VerticalAlignment="Top" Width="394"/>
+        </Grid>
+
+
+    </Viewbox>
+</UserControl>

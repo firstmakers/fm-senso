@@ -1,0 +1,69 @@
+﻿<Page x:Class="TMB.Vistas.Contenedor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:BUTTONS ="clr-namespace:TestBotones"
+      xmlns:user="clr-namespace:TMB"
+      mc:Ignorable="d" 
+      d:DesignHeight="722" d:DesignWidth="1024"
+	Title="Contenedor">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="289"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <!--Header-->
+        <user:Botonera x:Name="Botonera" Margin="8,5,0,0" Grid.ColumnSpan="2" MouseLeftButtonDown="DragMove" MouseDown="ChangeStateWindows"></user:Botonera>
+        <!--Background-->
+        <Border x:Name="Fondo2" Grid.Column="0" BorderThickness="4,4,0,4" Grid.Row="1" CornerRadius="0,0,0,15"  Background="#FFDBDBDB" Margin="0" BorderBrush="#FF5C85B8" Grid.RowSpan="2" MouseLeftButtonDown="DragMove" MouseDown="ChangeStateWindows"/>
+        <!--Header-->
+        <Border x:Name="Fondo5" Grid.Column="1" BorderThickness="0,4,4,0" Grid.Row="0" CornerRadius="0,15,0,0"  Background="#FFDBDBDB" Margin="19,0,0,570" BorderBrush="#FF5C85B8" Grid.RowSpan="2" Grid.ColumnSpan="2" MouseLeftButtonDown="DragMove" MouseDown="ChangeStateWindows"/>
+
+        <!--Header-->
+        <Border x:Name="Header" Margin="8,5,0,0" BorderThickness="0" CornerRadius="15,0,0,0" Grid.ColumnSpan="2" d:IsHidden="True" MouseLeftButtonDown="DragMove" MouseDown="ChangeStateWindows">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6998c7" Offset="0"/>
+                    <GradientStop Color="#FF5c85b8" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Border x:Name="Fondo3" Grid.Column="1" BorderThickness="0,0,0,4" Grid.Row="1" CornerRadius="0"  Background="#FFDBDBDB" BorderBrush="#FF5C85B8" Grid.RowSpan="2"/>
+        <Border x:Name="Fondo4" Grid.Column="2" BorderThickness="0,0,4,4" Grid.Row="1" CornerRadius="0,0,15,0"  Background="#FFDBDBDB" Margin="0" BorderBrush="#FF5C85B8" Grid.RowSpan="2" MouseLeftButtonDown="DragMove" MouseDown="ChangeStateWindows"/>
+
+
+        <Label x:Name="HeaderText"  VerticalContentAlignment="Center" Content="SISTEMA DE MEDICIÓN DE LUZ, TEMPERATURA Y HUMEDAD" Foreground="White" VerticalAlignment="Top" FontSize="32"  Margin="20,-5,0,0" Height="70"  Grid.RowSpan="2" MouseLeftButtonDown="DragMove" HorizontalAlignment="Left" FontFamily="/TMB_HID;component/Fonts/#Ubuntu Titling Rg" MouseDown="ChangeStateWindows"/>
+        <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="20,40,20,0">
+            <Frame Grid.Row="1" x:Name="Contenido" NavigationUIVisibility="Hidden" Width="720" Height="440"   Navigated="Navigated" />
+        </Viewbox>
+        <Image Margin="0,0,43,18" Source="Imagenes/Logo Australab.png" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" Width="175" VerticalAlignment="Bottom" />
+
+        <Label Name="Version" Padding="4"  Margin="45,0,540,10" FontFamily="/TMB_HID;component/Fonts/#Helvetica 55 Roman" FontStyle="Italic" FontWeight="Bold" Grid.Row="2" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="#FF232323"/>
+        <BUTTONS:WindowsStates Margin="142,10,12,13" Grid.Column="2" Height="Auto" Width="Auto" VerticalAlignment="Top" HorizontalAlignment="Right" />
+        <Label Padding="0" Content="Desarrollado por Austral38, Chile 2014" Margin="0,0,218,10" FontFamily="/TMB_HID;component/Fonts/#Helvetica 55 Roman" FontStyle="Italic" FontWeight="Bold" Grid.Row="2" HorizontalAlignment="Right" Width="226" Grid.ColumnSpan="3" Height="23" VerticalAlignment="Bottom" Foreground="#FF232323"/>
+        <Border x:Name="Fondo1" BorderThickness="0,4,0,0" Grid.Row="0"  CornerRadius="0,0,0,0"  Background="#FFDBDBDB" BorderBrush="#FF5C85B8" Margin="0,34,253,0" RenderTransformOrigin="0.609,0.399" Grid.RowSpan="2" Height="27" VerticalAlignment="Top" HorizontalAlignment="Right" Width="63" Grid.ColumnSpan="3" MouseLeftButtonDown="DragMove">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.017"/>
+                    <SkewTransform AngleX="-35" AngleY="0"/>
+                    <RotateTransform Angle="-70.509"/>
+                    <TranslateTransform X="-13" Y="-11"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <user:BtnVolver x:Name="Back" Height="42" Width="42" Grid.Column="2" Margin="170.416,47,76.584,583" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top"></user:BtnVolver>
+        <user:Device x:Name="Device" Height="42" Width="42" Grid.Column="2" Margin="227,47,20,583" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top"></user:Device>
+        <Image  x:Name="Logo" Margin="0,34,131,0"  HorizontalAlignment="Right" VerticalAlignment="Top" Height="61" Width="153" Source="Imagenes/logo-slth.png" Grid.Column="2" Grid.RowSpan="2" MouseLeftButtonDown="DragMove" MouseDown="ChangeStateWindows"/>
+    </Grid>
+</Page>

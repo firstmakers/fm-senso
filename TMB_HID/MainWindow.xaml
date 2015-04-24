@@ -1,0 +1,19 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:TMB="clr-namespace:TMB" mc:Ignorable="d" 
+    x:Class="TMB.Window1"
+    AllowsTransparency="true"  
+    Width="1024"
+    MinHeight="722"
+    MinWidth="1024"
+    Height="722"
+	WindowStyle="None"
+	x:Name="win" Foreground="{x:Null}" Background="{x:Null}" Closing="onClosing">
+    <Grid>
+        <Frame NavigationUIVisibility="Hidden" Source="/TMB_HID;component/Vistas/Contenedor.xaml"  ></Frame>
+    </Grid>
+</Window>

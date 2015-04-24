@@ -1,0 +1,23 @@
+﻿<UserControl xmlns:TMB="clr-namespace:TMB"  x:Class="TMB.BtnIniciar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="50" Width="150">
+    <Viewbox>
+        <Grid Height="50" Width="150">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Border x:Name="Background" BorderBrush="#FF635791" BorderThickness="3" CornerRadius="25" SizeChanged="sizeChanged" Grid.ColumnSpan="2" Background="#FF64699C" MouseEnter="mouseEnter" />
+
+            <TMB:Play x:Name="Icon" Grid.Column="0"  />
+            <Label Foreground="White" Margin="4,5,6,12" x:Name="Text" Content ="Iniciar" FontFamily="/TMB_HID;component/Fonts/#Ubuntu Titling Rg" FontSize="25" Grid.Column="1"/>
+
+
+        </Grid>
+    </Viewbox>
+
+</UserControl>

@@ -1,0 +1,59 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+	mc:Ignorable="d"
+	x:Class="TMB.Papelera"
+	x:Name="UserControl"
+d:DesignWidth="25" d:DesignHeight="25">
+    <Viewbox>
+        <Canvas Height="25" Width="25">
+            <Rectangle HorizontalAlignment="Left" Height="25"  RadiusY="12.5" RadiusX="12.5" Stroke="#FF09A1B5" StrokeThickness="1.5" VerticalAlignment="Top" Width="25" Fill="White"/>
+            <Path Data="M0,0 L2.9839959,0 3.246,0 5.1819918,0 6.2339959,0 8.4319916,0 7.4039998,11.75 6.2339959,11.75 4.2739918,11.75 4.154,11.75 2.9839959,11.75 1.0279918,11.75 z" Fill="#FF09A1B5" Height="12.5" Canvas.Left="7.538" Stretch="Fill" Canvas.Top="8.501" Width="10.494"/>
+            <ed:Arc ArcThickness="20" ArcThicknessUnit="Pixel" EndAngle="360" Fill="White" Height="3" Canvas.Left="11.252" Stretch="None" Stroke="#FF09A1B5" StartAngle="0" Canvas.Top="4.456" Width="3" StrokeThickness="0.8"/>
+            <Rectangle Fill="#FF09A1B5" Height="1.876" Canvas.Left="7.538" Canvas.Top="5.937" Width="10.494" RadiusY="0.712" RadiusX="0.712"/>
+            <Rectangle Fill="White" Height="9.75" Canvas.Left="15.437" RadiusY="0.712" RadiusX="0.712" StrokeThickness="0.8" Canvas.Top="10.062" Width="0.7" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="6"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Fill="White" Height="9.75" Canvas.Left="13.731" RadiusY="0.712" RadiusX="0.712" StrokeThickness="0.8" Canvas.Top="9.999" Width="0.699" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="3"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Fill="White" Height="9.75" Canvas.Left="9.648" RadiusY="0.712" RadiusX="0.712" StrokeThickness="0.8" Canvas.Top="9.999" Width="0.698" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-6"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Fill="White" Height="9.749" Canvas.Left="11.568" RadiusY="0.712" RadiusX="0.712" StrokeThickness="0.8" Canvas.Top="10" Width="0.698" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-3"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+        </Canvas>
+    </Viewbox>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="TMB.Pause"
+	x:Name="UserControl"
+d:DesignWidth="25" d:DesignHeight="25">
+    <Viewbox>
+        <Canvas Height="25" Width="25">
+            <Rectangle HorizontalAlignment="Left" Height="25"  RadiusY="12.5" RadiusX="12.5" Stroke="#FF09A1B5" StrokeThickness="1.5" VerticalAlignment="Top" Width="25" Fill="White"/>
+            <Rectangle Width="3.5" Height="10.75" Canvas.Left="7.75" Canvas.Top="7.042" Fill="#FF09A1B5" ></Rectangle>
+            <Rectangle Width="3.5" Height="10.75" Canvas.Left="13.708" Canvas.Top="7.042" Fill="#FF09A1B5" />
+        </Canvas>
+    </Viewbox>
+</UserControl>
